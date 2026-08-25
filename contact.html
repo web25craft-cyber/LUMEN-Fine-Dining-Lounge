@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - LUMEN Fine Dining & Lounge</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">LUMEN</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Kreu</a></li>
+            <li><a href="about.html">Rreth Nesh</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="lounge.html">Lounge</a></li>
+            <li><a href="contact.html" class="active">Kontakt</a></li>
+        </ul>
+        <a href="#reserve" class="btn-gold">Rrezervo Table</a>
+    </nav>
+
+    <!-- HERO / BREADCRUMB HEADER -->
+    <header class="contact-hero">
+        <div class="contact-hero-overlay"></div>
+        <div class="contact-hero-content">
+            <p class="breadcrumb">KREU &rarr; KONTAKT</p>
+            <h1>Kontakt</h1>
+        </div>
+    </header>
+
+    <!-- MAIN CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Left Column: Image with Contact Cards -->
+                <div class="contact-media-box">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800" alt="LUMEN Mixologist" class="contact-img">
+                    <div class="info-cards-wrapper">
+                        <div class="info-card">
+                            <span class="info-icon">&#128222;</span>
+                            <div>
+                                <span class="info-label">Telefon</span>
+                                <p class="info-value">+355 69 12 34 567</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <span class="info-icon">&#9993;</span>
+                            <div>
+                                <span class="info-label">Email</span>
+                                <p class="info-value">info@lumen-restaurant.al</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="contact-form-box">
+                    <span class="badge">KONTAKT</span>
+                    <h2>Na Kontaktoni</h2>
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="fullname">Emri i Plotë</label>
+                            <input type="text" id="fullname" placeholder="Shkruani emrin tuaj këtu" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="shembull@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Numri i Telefonit</label>
+                                <input type="tel" id="phone" placeholder="+355 69 XX XX XXX">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesazhi</label>
+                            <textarea id="message" rows="4" placeholder="Përshëndetje! Dëshiroj të pyes për..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-gold-block">Dërgo Mesazhin</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.198305001224!2d19.8188!3d41.3275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350310470fac5db%3A0x40092af10653720!2sTirana%2C%20Albania!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-grid">
+                <div class="faq-left">
+                    <span class="badge">FAQS</span>
+                    <h2>Gjithçka Që Duhet Të Dini</h2>
+                    <a href="#contact" class="btn-gold">Mëso Më Shumë</a>
+                </div>
+                <div class="faq-right">
+                    <details open class="faq-accordion active-acc">
+                        <summary>
+                            <span>A është e nevojshme rezervimi paraprak?</span>
+                            <span class="arrow">&uarr;</span>
+                        </summary>
+                        <p>Rezervimet rekomandohen veçanërisht për fundjavat dhe ngjarjet speciale me muzikë live, megjithatë pranojmë edhe klientë pa rezervim sipas disponueshmërisë në bar ose restorant.</p>
+                    </details>
+                    <details class="faq-accordion">
+                        <summary>
+                            <span>Cili është kodi i veshjes (Dress Code)?</span>
+                            <span class="arrow">&darr;</span>
+                        </summary>
+                        <p>Rekomandohet stil Smart Casual / Elegant për të ruajtur atmosferën ekskluzive të restorantit dhe Lounge-it tonë.</p>
+                    </details>
+                    <details class="faq-accordion">
+                        <summary>
+                            <span>A organizoni festa private ose evente korporative?</span>
+                            <span class="arrow">&darr;</span>
+                        </summary>
+                        <p>Po, ne ofrojmë organizime private për ditëlindje, festa korporative dhe evente koktej me meny të personalizuar.</p>
+                    </details>
+                    <details class="faq-accordion">
+                        <summary>
+                            <span>A keni opsione ushqimi ose pije pa alkool?</span>
+                            <span class="arrow">&darr;</span>
+                        </summary>
+                        <p>Po, kemi një seri mocktail-esh artizanale pa alkool si dhe pjata vegjetariane/vegane të përgatitura nga shefi ynë.</p>
+                    </details>
+                    <details class="faq-accordion">
+                        <summary>
+                            <span>A ofroni tarracë të jashtme për qëndrim?</span>
+                            <span class="arrow">&darr;</span>
+                        </summary>
+                        <p>Po, LUMEN disponon një ambient modern të jashtëm me ngrohje gjatë dimrit dhe freski gjatë verës.</p>
+                    </details>
+                    <details class="faq-accordion">
+                        <summary>
+                            <span>Si mund të rezervoj sallën e VIP-ave për evente private?</span>
+                            <span class="arrow">&darr;</span>
+                        </summary>
+                        <p>Mund të na kontaktoni drejtpërdrejt përmes formularit të mësipërm ose me telefon për të diskutuar menynë dhe hapësirën tuaj private.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo-zone">
+                    <h2 class="footer-logo">LUMEN</h2>
+                    <p class="tagline">Where every sip & bite feels exceptional</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="#" class="social-icon">y</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom-grid">
+                <div class="footer-col newsletter-col">
+                    <p>Atohuni në buletinin tonë për rejat dhe ngjarjet më të fundit.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email" required>
+                        <button type="submit" class="btn-gold-sm">Abonohu</button>
+                    </form>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Linqe të shpejta</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Kreu</a></li>
+                        <li><a href="about.html">Rreth Nesh</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="lounge.html">Lounge</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Oraret e Hapjes</h4>
+                    <p class="schedule-item">E Hënë – E Enjte: 16:00 – 00:00</p>
+                    <p class="schedule-item">E Premte – E Shtunë: 16:00 – 02:00</p>
+                    <p class="schedule-item">E Diel: 17:00 – 23:00</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Na Kontaktoni</h4>
+                    <p class="contact-info-item">Rruga Mustafa Matohiti, Tiranë, Shqipëri</p>
+                    <p class="contact-info-item">info@lumen-restaurant.al</p>
+                    <p class="contact-info-item">+355 69 12 34 567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

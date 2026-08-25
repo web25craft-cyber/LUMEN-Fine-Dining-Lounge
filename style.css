@@ -1,0 +1,3463 @@
+/* ==========================================
+   LUMEN FINE DINING - HERO & OVERLAY STYLES
+   ========================================== */
+
+:root {
+    --font-cormorant: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --overlay-bg: #bbb295;
+    --text-dark: #2b2b2b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+}
+
+/* --- TOP HEADER --- */
+.top-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    z-index: 100;
+    color: #fff;
+}
+
+.reservation-link {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.brand-logo, .brand-logo-dark {
+    font-family: var(--font-cormorant);
+    font-size: 32px;
+    letter-spacing: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang-switch {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: #fff;
+}
+
+/* --- HERO SLIDER --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, transform 6s ease-out;
+    transform: scale(1);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-title {
+    font-family: var(--font-cormorant);
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* Michelin Badge */
+.badge-michelin {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 85px;
+    background-color: #b31e24;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 auto;
+}
+
+.badge-michelin small {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+/* --- OVERLAY MENU --- */
+.menu-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: var(--overlay-bg);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 40px 60px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 38px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    margin-top: auto;
+}
+
+.overlay-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.overlay-nav a {
+    font-family: var(--font-cormorant);
+    font-size: 42px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.overlay-nav a:hover {
+    color: var(--text-dark);
+}
+
+.overlay-info {
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 38px;
+    }
+    .overlay-nav a {
+        font-size: 28px;
+    }
+    .top-header {
+        padding: 20px;
+    }
+}
+
+
+/* ==========================================
+   CRAFTING CULINARY MAGIC SECTION (LARGE SCALE)
+   ========================================== */
+
+.magic-section {
+    background-color: #ffffff;
+    padding: 120px 6% 100px;
+    position: relative;
+}
+
+.magic-container {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 80px;
+    align-items: start;
+    max-width: 1400px; /* Rritur gjerësia e përgjithshme */
+    margin: 0 auto;
+}
+
+/* ANA E MAJTË */
+.magic-left {
+    padding-top: 40px;
+}
+
+.title-wrap {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.line-decor {
+    display: block;
+    width: 60px; /* Line më e gjatë */
+    height: 1px;
+    background-color: #aaaaaa;
+    margin-bottom: 30px;
+}
+
+/* Titulli më i madh dhe me hapësirë shkronjash si në foto */
+.serif-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    letter-spacing: 6px;
+    color: #111111;
+    line-height: 1.05;
+    font-weight: 500;
+}
+
+.gold-text {
+    color: #b39359;
+}
+
+/* Teksti më i madh dhe i lexueshëm */
+.section-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.9;
+    margin-bottom: 28px;
+    max-width: 480px;
+}
+
+.link-wrap {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.underline-link {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px; /* Rritur madhësia e linkut */
+    color: #111111;
+    text-decoration: none;
+    border-bottom: 1.5px solid #111111;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.underline-link:hover {
+    color: #b39359;
+    border-color: #b39359;
+}
+
+/* Imazhi i vogël në të majtë po ashtu më i madh */
+.small-food-img {
+    width: 440px;
+    height: 440px;
+}
+
+.small-food-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ANA E DJATHTË */
+.magic-right {
+    margin-top: -60px; /* Ngrihet lart për të krijuar efektin si në foto */
+}
+
+.large-food-img {
+    width: 100%;
+}
+
+.large-food-img img {
+    width: 100%;
+    height: 720px; /* Imazh i madh kryesor */
+    object-fit: cover;
+    display: block;
+}
+
+.info-schedule-box {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.address-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.hours-list {
+    margin-bottom: 25px;
+}
+
+.hours-list p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+.hours-list .happy-hour {
+    color: #b39359;
+    margin-top: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .magic-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .magic-right {
+        margin-top: 0;
+    }
+
+    .serif-heading {
+        font-size: 48px;
+    }
+
+    .small-food-img {
+        width: 100%;
+        max-width: 360px;
+        height: 360px;
+    }
+
+    .large-food-img img {
+        height: 500px;
+    }
+}
+
+
+/* ==========================================
+   LA CARTE SECTION (CORRECT CLIP-PATH)
+   ========================================== */
+
+.lacarte-section {
+    background-color: #ffffff;
+    padding-top: 100px;
+    position: relative;
+    text-align: center;
+}
+
+.lacarte-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Titulli me dy vija anash */
+.lacarte-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.side-line {
+    flex: 1;
+    max-width: 140px;
+    height: 1px;
+    background-color: #d6c5a3;
+}
+
+.lacarte-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    letter-spacing: 8px;
+    color: #111111;
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Teksti */
+.lacarte-text-wrap {
+    max-width: 760px;
+    margin: 0 auto 50px;
+}
+
+.lacarte-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.95;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+/* Wraperi i fotos */
+.lacarte-banner-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Butoni i pozicionuar fiks te hapësira e bardhë mbi prerje */
+.lacarte-btn-overlay {
+    position: absolute;
+    top: 35px;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.menu-underline-link {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: #111111;
+    text-decoration: none;
+    border-top: 1px solid #d6c5a3;
+    border-bottom: 1px solid #d6c5a3;
+    padding: 6px 24px;
+    letter-spacing: 1.5px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.menu-underline-link:hover {
+    color: #b39359;
+    border-color: #b39359;
+}
+
+/* Prerja me Clip-Path: Anë e majtë e lartë (0 0), pastaj ulet te 30% e gjerësisë (30% 120px) deri te cepi i djathtë (100% 120px) */
+.lacarte-clipped-img {
+    width: 80%; /* Madhësia e plotë e fotos si në dizajnin origjinal */
+    margin: 0 auto 0 0; /* E lidhur nga ana e majtë */
+    clip-path: polygon(0 0, 30% 0, 30% 130px, 100% 130px, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 30% 0, 30% 130px, 100% 130px, 100% 100%, 0 100%);
+}
+
+.lacarte-clipped-img img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .lacarte-clipped-img {
+        width: 100%;
+        clip-path: none;
+        -webkit-clip-path: none;
+    }
+
+    .lacarte-btn-overlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-bottom: 30px;
+    }
+
+    .lacarte-clipped-img img {
+        height: 400px;
+    }
+}
+
+/* ==========================================
+   THE CHEF'S WORDS (CARD OVERLAY APPROACH)
+   ========================================== */
+
+.chefs-section {
+    background-color: #ffffff;
+    padding-top: 90px;
+    padding-bottom: 160px;
+    position: relative;
+    width: 100%;
+}
+
+/* HEADER CONTAINER */
+.chefs-header-container {
+    max-width: 860px;
+    margin: 0 auto 70px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.chefs-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.chefs-title-wrap .side-line {
+    flex: 1;
+    max-width: 140px;
+    height: 1px;
+    background-color: #d6c5a3;
+}
+
+.chefs-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    letter-spacing: 8px;
+    color: #111111;
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.chefs-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.chefs-subtitle .gold-text {
+    color: #c0ab82;
+}
+
+.chefs-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.9;
+    font-weight: 400;
+}
+
+/* STAGE CONTAINER */
+.chefs-stage-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 0 0 auto; /* E ngjitur në skajin e djathtë */
+}
+
+/* 1. Fotoja e madhe në të djathtë */
+.bg-utensils-full {
+    width: 68%;
+    margin-left: auto;
+}
+
+.bg-utensils-full img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 2. Karta e bardhë me dorëshkrimin që krijon "prerjen" */
+.chef-white-card {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 42%;
+    background-color: #ffffff;
+    padding: 60px 50px 60px 8%;
+    z-index: 3;
+}
+
+.handwriting-text {
+    font-family: 'Caveat', cursive;
+    font-size: 38px;
+    color: #222222;
+    line-height: 1.45;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+/* 3. Portreti vertikal i shefit */
+.chef-portrait-card {
+    position: absolute;
+    top: 150px;
+    left: 52%;
+    width: 320px;
+    height: 480px;
+    z-index: 5;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.chef-portrait-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+    .chefs-stage-wrapper {
+        margin: 0 auto;
+    }
+
+    .bg-utensils-full {
+        width: 100%;
+    }
+
+    .chef-white-card {
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .chef-portrait-card {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: -60px;
+        width: 85%;
+        max-width: 340px;
+        height: 420px;
+    }
+}
+
+
+
+/* ==========================================
+   1. GALLERY TRIO SECTION
+   ========================================== */
+.gallery-trio-section {
+    width: 100%;
+    padding: 60px 0 100px;
+    background-color: #ffffff;
+}
+
+.gallery-trio-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================
+   2. THE RESTAURANT OVERLAY BANNER SECTION
+   ========================================== */
+.restaurant-banner-section {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 80px;
+}
+
+/* Kutia e errët që mbivendoset sipër fotos */
+.dark-overlay-card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1050px;
+    background-color: #262f3a; /* Ngjyra gri në të errët/marinar */
+    padding: 70px 60px;
+    text-align: center;
+    z-index: 5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.restaurant-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.side-line-gold {
+    flex: 1;
+    max-width: 100px;
+    height: 1px;
+    background-color: #c0ab82;
+}
+
+.restaurant-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    letter-spacing: 7px;
+    color: #c0ab82;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.dark-card-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #e0e0e0;
+    line-height: 2;
+    max-width: 780px;
+    margin: 0 auto 35px;
+}
+
+.dark-card-btn-wrap {
+    display: inline-block;
+}
+
+.gold-underline-link {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #ffffff;
+    text-decoration: none;
+    border-top: 1px solid #c0ab82;
+    border-bottom: 1px solid #c0ab82;
+    padding: 6px 20px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.gold-underline-link:hover {
+    color: #c0ab82;
+}
+
+/* Fotoja e restorantit me lartësi dhe padding që lejon mbulimin nga kutia */
+.restaurant-full-img {
+    width: 100%;
+    padding-top: 240px; /* Hapësirë që fotoja të zbresë nën kutinë e errët */
+}
+
+.restaurant-full-img img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================
+   3. FOOTER SECTION
+   ========================================== */
+.site-footer {
+    background-color: #ffffff;
+    padding: 90px 20px 40px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    letter-spacing: 12px;
+    color: #111111;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.footer-divider-top,
+.footer-divider-bottom {
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 30px 0;
+}
+
+.footer-address {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+.footer-hours p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+.footer-hours span {
+    font-weight: 500;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.footer-socials a {
+    color: #111111;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #c0ab82;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #666666;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #111111;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .gallery-trio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 350px;
+    }
+
+    .dark-overlay-card {
+        position: relative;
+        top: 0;
+        transform: none;
+        left: 0;
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .restaurant-full-img {
+        padding-top: 0;
+    }
+
+    .restaurant-title {
+        font-size: 32px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+
+/* ==========================================
+   ABOUT US HERO & NAVBAR
+   ========================================== */
+
+/* Prapavija Krem / Fildish */
+body, .about-hero-section {
+    background-color: #fcfbfa; /* Ngjyra e lehtë krem nga dizajni */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1a3322;
+}
+
+/* NAVBAR */
+.navbar-header {
+    width: 100%;
+    padding: 25px 0;
+    background-color: transparent;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    stroke: #1a3322;
+}
+
+.logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #1a3322;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    color: #b86235; /* Ngjyra kafe/terrakotë e përzgjedhur për linkun aktiv */
+}
+
+.has-dropdown .arrow {
+    display: inline-block;
+    transform: rotate(90deg);
+    font-size: 14px;
+    margin-left: 3px;
+}
+
+/* ABOUT HERO SECTION */
+.about-hero-section {
+    width: 100%;
+    padding: 40px 0 100px;
+}
+
+.about-hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* ANA E MAJTË - IMAZHI DHE SOCIALS */
+.about-image-column {
+    position: relative;
+    width: 50%;
+}
+
+.waiter-image-wrap {
+    width: 100%;
+    height: 650px;
+}
+
+.waiter-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* PANELI I SOCIALS (KUTITË E BARDHA NË TË MAJTË) */
+.social-side-bar {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+}
+
+.social-side-bar a {
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a3322;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-side-bar a:hover {
+    background-color: #1a3322;
+    color: #ffffff;
+}
+
+/* ANA E DJATHTË - TEKSTI */
+.about-text-column {
+    width: 50%;
+    padding-right: 8%;
+    text-align: center;
+}
+
+.about-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    font-weight: 400;
+    color: #142e1d; /* Ngjyrë e errët me nuancë të lehtë jeshile/zi */
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.about-description {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.8;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-hero-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-image-column,
+    .about-text-column {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .waiter-image-wrap {
+        height: 450px;
+    }
+
+    .social-side-bar {
+        left: 30px;
+    }
+
+    .about-title {
+        font-size: 50px;
+    }
+}
+
+.features-stats-section {
+    background-color: #f7f6f0;
+    padding: 60px 0 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.features-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* KOLONA E MAJTË - KARTELAT */
+.stats-col {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.stat-card-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card-label {
+    font-size: 13px;
+    color: #3b4e41;
+    font-weight: 400;
+}
+
+.stat-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 28px;
+    height: 110px;
+    box-sizing: border-box;
+}
+
+/* Kartela 1 */
+.card-cream {
+    background-color: #ffffff;
+}
+
+/* Kartela 2 */
+.card-dark {
+    background-color: #05261e;
+    color: #ffffff;
+}
+
+.card-dark .stat-number,
+.card-dark .stat-title {
+    color: #ffffff;
+}
+
+.card-dark .stat-icon svg {
+    stroke: #ffffff;
+}
+
+/* Kartela 3 */
+.card-bordered {
+    background-color: transparent;
+    border: 1px solid #e2ded4;
+}
+
+/* Tipografia e Kartelave */
+.stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1;
+    color: #0b2219;
+}
+
+.stat-title {
+    font-size: 12px;
+    color: #666666;
+    margin: 6px 0 0 0;
+}
+
+.stat-icon svg {
+    width: 38px;
+    height: 38px;
+    stroke: #0b2219;
+}
+
+/* KOLONA E DJATHTË - FOTOJA DHE TEKSTI */
+.content-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-image-wrap {
+    width: 100%;
+    height: 250px;
+    margin-top: 24px;
+    overflow: hidden;
+}
+
+.banner-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.heading-block {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tag-text {
+    font-size: 13px;
+    color: #b35944;
+    align-self: flex-end; /* Pozicionon '// Why Choose us' në të djathtë */
+    margin-bottom: 15px;
+}
+
+.main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 54px;
+    color: #0b2219;
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0;
+    text-align: left;
+}
+
+/* ==========================================
+   RESERVATION & ABOUT US SECTION
+   ========================================== */
+
+.reservation-about-section {
+    background-color: #f7f6f0;
+    padding: 80px 0 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.reservation-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* TOP HEADER ROW */
+.top-header-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.header-left {
+    width: 45%;
+}
+
+.sub-tag {
+    font-size: 13px;
+    color: #b35944;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    color: #0b2219;
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.header-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.description-text {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CTA RESERVATION BANNER */
+.cta-banner {
+    background-color: #05261e;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-banner:hover {
+    background-color: #0b3a2f;
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cta-icon svg {
+    width: 34px;
+    height: 34px;
+    stroke: #ffffff;
+}
+
+.cta-subtitle {
+    font-size: 11px;
+    color: #a3c2b5;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+.cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 2px 0 0 0;
+    color: #ffffff;
+}
+
+.cta-arrow {
+    background-color: #ffffff;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-arrow svg {
+    width: 20px;
+    height: 20px;
+    stroke: #05261e;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e2ded4;
+    margin: 45px 0 60px 0;
+}
+
+/* CHEF & OVERLAP CARD SECTION */
+.chef-content-grid {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+
+.chef-image-wrap {
+    width: 65%;
+    height: 520px;
+    overflow: hidden;
+}
+
+.chef-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* KARTELA QË MBIVENDOSET (OVERLAP) */
+.about-overlap-card {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 48%;
+    background-color: #f7f6f0;
+    padding: 45px 50px;
+    box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+}
+
+.card-main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #0b2219;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 10px 0 20px 0;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* FOOTER I KARTELËS */
+.card-footer {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.feature-icon-box {
+    background-color: #05261e;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon-box svg {
+    width: 26px;
+    height: 26px;
+    stroke: #ffffff;
+}
+
+.footer-action {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-note {
+    font-size: 13px;
+    color: #444444;
+    margin: 0;
+    max-width: 220px;
+}
+
+.btn-discover {
+    display: inline-block;
+    background-color: #05261e;
+    color: #ffffff;
+    padding: 10px 22px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.btn-discover:hover {
+    background-color: #0b3a2f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .top-header-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .header-left, .header-right {
+        width: 100%;
+    }
+    .chef-content-grid {
+        flex-direction: column;
+    }
+    .chef-image-wrap {
+        width: 100%;
+        height: 350px;
+    }
+    .about-overlap-card {
+        position: relative;
+        width: 100%;
+        top: 0;
+        padding: 30px 20px;
+    }
+}
+
+
+/* ==========================================
+   RESERVATION & CONTACT FORM SECTION
+   ========================================== */
+
+.reservation-contact-section {
+    position: relative;
+    background-color: #f7f6f0;
+    padding-bottom: 90px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* FOTOJA E SFONDIT SIPËR */
+.reservation-hero-bg {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.reservation-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+}
+
+/* CONTAINER KRYESOR */
+.reservation-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 480px;
+    gap: 60px;
+    align-items: start;
+    position: relative;
+}
+
+/* KOLONA E MAJTË - TEKSTI DHE INFO */
+.contact-info-col {
+    padding-top: 50px;
+}
+
+.sub-tag {
+    font-size: 13px;
+    color: #b35944;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.contact-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #0b2219;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 40px 0;
+    max-width: 520px;
+}
+
+.contact-buttons-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.info-badge {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e5e2d9;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+.info-badge.full-width {
+    width: fit-content;
+}
+
+.badge-icon {
+    background-color: #05261e;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: #ffffff;
+}
+
+.badge-text {
+    font-size: 12px;
+    color: #333333;
+    padding: 0 16px;
+    font-weight: 500;
+}
+
+/* KOLONA E DJATHTË - FORMA E MBIVENDOSUR (OVERLAP) */
+.reservation-form-card {
+    background-color: #fbfaf5;
+    padding: 40px 45px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    margin-top: -140px; /* Ngrit formën sipër fotos */
+    position: relative;
+    z-index: 5;
+    border: 1px solid #eae7dc;
+}
+
+.form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: #0b2219;
+    font-weight: 500;
+    margin: 0 0 25px 0;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 11px;
+    color: #555555;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dfdbc9;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #333333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+    font-size: 11px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #05261e;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    align-self: flex-start;
+    background-color: #8c3b2b; /* Ngjyrë e kuqe e errët / terrakotë */
+    color: #ffffff;
+    border: none;
+    padding: 12px 26px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #6e2d20;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .reservation-content-container {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-form-card {
+        margin-top: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-info-col {
+        padding-top: 20px;
+    }
+}
+
+
+/* ==========================================
+   OPENING HOURS SECTION
+   ========================================== */
+
+.hours-section {
+    background-color: #f7f6f0;
+    padding: 80px 0 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hours-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.hours-image-col {
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+}
+
+.hours-image-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hours-content-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-tag {
+    font-size: 13px;
+    color: #b35944;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hours-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    color: #0b2219;
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 0 45px 0;
+}
+
+/* Lista e Orarit me Pika Dash */
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 50px;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: baseline;
+    font-size: 13px;
+    color: #333333;
+}
+
+.schedule-item .day {
+    font-weight: 500;
+    min-width: 90px;
+}
+
+.schedule-item .dots {
+    flex-grow: 1;
+    border-bottom: 1px dashed #c0bcae;
+    margin: 0 15px;
+}
+
+.schedule-item .time {
+    font-weight: 500;
+}
+
+/* Banner-i i Rezervimit */
+.hours-cta-banner {
+    background-color: #05261e;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 14px;
+}
+
+.btn-book-white {
+    background-color: #ffffff;
+    color: #05261e;
+    padding: 8px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-book-white:hover {
+    background-color: #e5e2d9;
+}
+
+/* ==========================================
+   FOOTER SECTION
+   ========================================== */
+
+.site-footer {
+    background-color: #032018;
+    color: #ffffff;
+    padding: 80px 0 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-main-row {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 80px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+    color: #d0d7d3;
+}
+
+.footer-email {
+    text-decoration: underline;
+    margin: 0;
+}
+
+.footer-address, .footer-phone {
+    margin: 0;
+}
+
+.footer-col-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-sep {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 30px 0;
+    max-width: 650px;
+    color: #ffffff;
+}
+
+.btn-footer-cta {
+    background-color: #8c3b2b;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-footer-cta:hover {
+    background-color: #6e2d20;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hours-container,
+    .footer-main-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hours-image-col {
+        height: 380px;
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}
+
+/* ==========================================
+   GLOBAL STYLES & BASE SETTINGS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f6f0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Common Titles */
+.section-tag {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #8c7b6b;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    color: #1a1a1a;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title.left-align {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   1. HERO & NAVBAR
+   ========================================== */
+.menu-hero {
+    position: relative;
+    height: 480px;
+    background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 10, 8, 0.65);
+    z-index: 1;
+}
+
+.navbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+.hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.breadcrumb {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 5px;
+}
+
+/* ==========================================
+   2. MENU SELECTION
+   ========================================== */
+.menu-selection-section {
+    padding: 100px 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.menu-card {
+    background-color: #f1efe6;
+    padding: 45px 40px;
+    border-radius: 2px;
+}
+
+.category-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    color: #1a1a1a;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    margin-bottom: 25px;
+}
+
+.menu-item:last-child {
+    margin-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    align-items: baseline;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #1a1a1a;
+}
+
+.item-name {
+    font-weight: 500;
+}
+
+.item-header .dots {
+    flex-grow: 1;
+    border-bottom: 1px dashed #cfcbbe;
+    margin: 0 15px;
+}
+
+.item-price {
+    font-weight: 400;
+}
+
+.item-desc {
+    font-size: 12px;
+    color: #777777;
+    margin-top: 6px;
+}
+
+/* ==========================================
+   3. GALLERY SECTION
+   ========================================== */
+.gallery-section {
+    padding: 60px 0 100px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery-col img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-col:nth-child(1) img:nth-child(1) { height: 260px; }
+.gallery-col:nth-child(1) img:nth-child(2) { height: 320px; }
+
+.gallery-col:nth-child(2) img:nth-child(1) { height: 340px; }
+.gallery-col:nth-child(2) img:nth-child(2) { height: 240px; }
+
+.gallery-col:nth-child(3) img:nth-child(1) { height: 260px; }
+.gallery-col:nth-child(3) img:nth-child(2) { height: 320px; }
+
+/* ==========================================
+   4. FAQ SECTION
+   ========================================== */
+.faq-section {
+    padding: 80px 0 120px;
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 80px;
+}
+
+.faq-subtext {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.7;
+}
+
+.faq-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0ddd0;
+    padding: 20px 0;
+}
+
+.faq-item summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: #1a1a1a;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary .icon::after {
+    content: '\2303'; /* Arrow Up */
+    display: inline-block;
+    transform: rotate(180deg);
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.faq-item[open] summary .icon::after {
+    transform: rotate(0deg);
+}
+
+.faq-answer {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   5. FOOTER SECTION
+   ========================================== */
+.culina-footer {
+    background-color: #241a15;
+    color: #ffffff;
+    position: relative;
+}
+
+.footer-hero-cta {
+    position: relative;
+    padding: 100px 20px;
+    background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600') center/cover no-repeat;
+    text-align: center;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.cta-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.btn-reserve {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 12px 28px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-reserve:hover {
+    background-color: #e5e0d8;
+}
+
+/* Footer Bottom Links */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 40px;
+}
+
+.footer-brand {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 60px;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-col h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.footer-col a:hover {
+    color: #ffffff;
+}
+
+.info-line {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .menu-grid, .gallery-grid, .faq-container, .footer-links-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-col img {
+        height: 250px !important;
+    }
+    .footer-copyright {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ==========================================
+   DARK LUXURY STYLES - LUMEN LOUNGE
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0a08; /* Dark premium espresso/black */
+    color: #e5e0d8;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Badges & Buttons */
+.badge {
+    display: inline-block;
+    background-color: #5c2018; /* Dark reddish burgundy */
+    color: #e5a060;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.btn-gold {
+    display: inline-block;
+    background-color: #d88018; /* Gold/Amber Accent */
+    color: #0d0a08;
+    padding: 12px 26px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #f09528;
+}
+
+.btn-gold-sm {
+    display: inline-block;
+    background-color: #d88018;
+    color: #0d0a08;
+    padding: 8px 16px;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.link-gold {
+    color: #d88018;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background-color: #0d0a08;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #e5e0d8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #a09a90;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* HERO SECTION */
+.hero-section {
+    padding: 40px 0 80px;
+}
+
+.hero-title-top {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    text-align: right;
+    font-weight: 400;
+    margin-bottom: -40px;
+    position: relative;
+    z-index: 2;
+    color: #f0e6d8;
+}
+
+.hero-card {
+    position: relative;
+    background-color: #18120e;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero-card img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.85;
+}
+
+.hero-title-bottom {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 400;
+    color: #f0e6d8;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 3;
+}
+
+.hero-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 30px 40px;
+    background-color: #18120e;
+}
+
+.hero-card-action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 450px;
+}
+
+.hero-card-action p {
+    font-size: 12px;
+    color: #a09a90;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.about-text p {
+    font-size: 13px;
+    color: #a09a90;
+    margin-bottom: 20px;
+}
+
+.about-media {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 20px;
+}
+
+.about-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.video-card {
+    position: relative;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    background: rgba(240, 230, 216, 0.8);
+    color: #0d0a08;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* COCKTAILS SECTION */
+.cocktails-section {
+    padding: 80px 0;
+}
+
+.section-center-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-center-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.cocktails-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.cocktail-card {
+    background-color: #15100c;
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid #221a14;
+}
+
+.cocktail-img {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cocktail-img img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.cocktail-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.cocktail-card p {
+    font-size: 12px;
+    color: #8a8278;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #221a14;
+    padding-top: 15px;
+}
+
+.card-footer .price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: #f0e6d8;
+}
+
+.cocktails-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.list-card {
+    background-color: #15100c;
+    border-radius: 8px;
+    padding: 35px;
+    border: 1px solid #221a14;
+}
+
+.list-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #221a14;
+}
+
+.list-item:last-child {
+    margin-bottom: 0;
+    border: none;
+}
+
+.list-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.list-item-header h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.list-item-header .price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #f0e6d8;
+}
+
+.list-item p {
+    font-size: 11px;
+    color: #8a8278;
+}
+
+/* CTA BANNER */
+.cta-banner {
+    position: relative;
+    padding: 120px 20px;
+    background: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1600') center/cover no-repeat;
+    text-align: center;
+}
+
+.cta-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 10, 8, 0.85);
+}
+
+.cta-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-banner-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 54px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.cta-banner-content p {
+    font-size: 13px;
+    color: #a09a90;
+    margin-bottom: 30px;
+}
+
+/* EVENTS SECTION */
+.events-section {
+    padding: 100px 0;
+}
+
+.events-header {
+    margin-bottom: 40px;
+}
+
+.events-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.event-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 260px;
+}
+
+.event-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.event-card.tall-event {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    height: 100%;
+}
+
+.event-overlay h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.event-meta {
+    font-size: 11px;
+    color: #d88018;
+    margin-bottom: 12px;
+}
+
+/* FAQ & BLOG SECTION */
+.faq-blog-section {
+    padding: 80px 0 120px;
+}
+
+.faq-block {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+.faq-left h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.faq-accordion {
+    border-bottom: 1px solid #221a14;
+    padding: 18px 0;
+}
+
+.faq-accordion summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.faq-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-accordion p {
+    font-size: 12px;
+    color: #8a8278;
+    margin-top: 10px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.blog-card {
+    background-color: #15100c;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #221a14;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-date {
+    font-size: 10px;
+    color: #d88018;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.blog-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.blog-card p {
+    font-size: 11px;
+    color: #8a8278;
+}
+
+/* FOOTER */
+.footer {
+    border-top: 1px solid #221a14;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-brand h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    font-size: 11px;
+    color: #8a8278;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
+    font-size: 10px;
+    color: #554e46;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .about-grid, .cocktails-grid-3, .cocktails-grid-2, .events-grid, .faq-block, .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    .event-card.tall-event {
+        grid-column: 1 / 2;
+        grid-row: auto;
+        height: 260px;
+    }
+    .hero-title-top, .hero-title-bottom {
+        font-size: 48px;
+    }
+    .hero-card-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+
+
+/* ==========================================
+   DARK LUXURY STYLES - LUMEN CONTACT PAGE
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0806;
+    color: #e5e0d8;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Badges & Buttons */
+.badge {
+    display: inline-block;
+    background-color: #4a1c14;
+    color: #d88018;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.btn-gold {
+    display: inline-block;
+    background-color: #d88018;
+    color: #0b0806;
+    padding: 12px 26px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-gold:hover {
+    background-color: #f09528;
+}
+
+.btn-gold-block {
+    display: block;
+    width: 100%;
+    background-color: #d88018;
+    color: #0b0806;
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-gold-block:hover {
+    background-color: #f09528;
+}
+
+.btn-gold-sm {
+    background-color: #d88018;
+    color: #0b0806;
+    padding: 10px 18px;
+    font-size: 11px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background-color: #0b0806;
+    border-bottom: 1px solid #1a1410;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #e5e0d8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #a09a90;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* CONTACT HERO HEADER */
+.contact-hero {
+    position: relative;
+    height: 240px;
+    background: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1600') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 8, 6, 0.82);
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #d88018;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 400;
+    color: #f0e6d8;
+}
+
+/* MAIN CONTACT SECTION */
+.contact-section {
+    padding: 90px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Media Box & Floating Cards */
+.contact-media-box {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.contact-img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.info-cards-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.info-card {
+    background-color: #f3efe6;
+    color: #110d0a;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.info-icon {
+    font-size: 20px;
+    color: #d88018;
+}
+
+.info-label {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.info-value {
+    font-size: 11px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Form Box */
+.contact-form-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 12px;
+    color: #e5e0d8;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #2a2018;
+    border-radius: 6px;
+    padding: 14px 16px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d88018;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* MAP SECTION */
+.map-section {
+    padding-bottom: 90px;
+}
+
+.map-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1a1410;
+}
+
+/* FAQ SECTION */
+.faq-section {
+    padding: 40px 0 100px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
+}
+
+.faq-left h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.faq-accordion {
+    background-color: #120e0b;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 18px 24px;
+    border: 1px solid #1c1612;
+}
+
+.faq-accordion summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    cursor: pointer;
+    color: #e5e0d8;
+}
+
+.faq-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-accordion[open] {
+    background-color: #d88018;
+    color: #0b0806;
+}
+
+.faq-accordion[open] summary {
+    color: #0b0806;
+    font-weight: 600;
+}
+
+.faq-accordion p {
+    font-size: 12px;
+    color: #a09a90;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+.faq-accordion[open] p {
+    color: #1a1410;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #070504;
+    padding: 80px 0 40px;
+    border-top: 1px solid #1a1410;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #8a8278;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #d88018;
+    color: #0b0806;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: #1a1410;
+    margin-bottom: 40px;
+}
+
+.footer-bottom-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-col h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #f0e6d8;
+}
+
+.newsletter-col p {
+    font-size: 12px;
+    color: #8a8278;
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    background-color: #120e0b;
+    border: 1px solid #2a2018;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.newsletter-form input {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    outline: none;
+    font-size: 12px;
+    width: 100%;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #8a8278;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #d88018;
+}
+
+.schedule-item, .contact-info-item {
+    font-size: 12px;
+    color: #8a8278;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .contact-grid, .faq-grid, .footer-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-cards-wrapper {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 15px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

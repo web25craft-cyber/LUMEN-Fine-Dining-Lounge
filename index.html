@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMEN - Fine Dining & Lounge Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonti Cormorant Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Top Bar -->
+    <header class="top-header">
+        <div class="header-left">
+            <a href="reservations.html" class="reservation-link">Rezervime</a>
+        </div>
+        <div class="header-center">
+            <a href="index.html" class="brand-logo">LUMEN</a>
+        </div>
+        <div class="header-right">
+            <span class="lang-switch">SQ &nbsp; EN</span>
+            <button class="hamburger-btn" id="openMenuBtn" aria-label="Hap Menynë">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Fullscreen Menu Overlay (Me 7 Faqet) -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="overlay-header">
+            <div class="brand-logo-dark">LUMEN</div>
+            <button class="close-btn" id="closeMenuBtn" aria-label="Mbyll Menynë">&times;</button>
+        </div>
+        <div class="overlay-content">
+            <nav class="overlay-nav">
+                <a href="index.html">Kreu</a>
+                <a href="about.html">Rreth Nesh</a>
+                <a href="menu.html">Menyja</a>
+                <a href="lounge.html">Lounge Bar</a>
+                <a href="gallery.html">Galeria</a>
+                <a href="reservations.html">Rezervime</a>
+                <a href="contact.html">Kontakt</a>
+            </nav>
+            <div class="overlay-info">
+                <p>📍 Rruga e Barrikadave, Tiranë, Shqipëri</p>
+                <p>📞 +355 69 999 8888</p>
+                <p>Mbyllur ditën e Hënë</p>
+                <p>E Martë - E Diel: 12:00 - 14:30 & 19:00 - 23:30</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section me Background Slider -->
+    <section class="hero-section">
+        <!-- Slides -->
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1600');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1600');"></div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="hero-title">
+                NJË UDHËTIM KULINAR<br>
+                I SHIJEVE TË VEÇANTA<br>
+                DHE ELEGANCËS
+            </h1>
+            <div class="badge-michelin">
+                <span>MICHELIN</span>
+                <small>2026</small>
+            </div>
+        </div>
+    </section>
+
+
+<section class="magic-section">
+    <div class="magic-container">
+        <!-- Ana e Majtë -->
+        <div class="magic-left">
+            <div class="title-wrap">
+                <span class="line-decor"></span>
+                <h2 class="serif-heading">
+                    CRAFTING<br>
+                    <span class="gold-text">CULINARY</span><br>
+                    MAGIC
+                </h2>
+            </div>
+
+            <p class="section-desc">
+                Mirësevini në LUMEN, ku gastronomia takohet me artin dhe çdo pjatë është një simfoni shijesh. I vendosur në zemër të Tiranës, restoranti ynë është një oaz për adhuruesit e ushqimit dhe eksploruesit e kulinarisë.
+            </p>
+
+            <p class="section-desc">
+                Ne besojmë në krijimin e përvojave unike të ngrënies që zgjojnë të gjitha shqisat. Shefat tanë ndërthurin teknikat tradicionale me prirjet moderne për të ofruar një meny që feston thelbin e fine dining.
+            </p>
+
+            <div class="link-wrap">
+                <a href="about.html" class="underline-link">Zbuloni Kuzhinën Tonë</a>
+            </div>
+
+            <div class="small-food-img">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800" alt="LUMEN Special Dish">
+            </div>
+        </div>
+
+        <!-- Ana e Djathtë -->
+        <div class="magic-right">
+            <div class="large-food-img">
+                <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=1000" alt="Featured Dish">
+            </div>
+
+            <div class="info-schedule-box">
+                <p class="address-txt">📍 Rruga e Barrikadave, Tiranë, Shqipëri</p>
+                <div class="hours-list">
+                    <p>E Hënë - E Enjte: 11:00 - 23:00</p>
+                    <p>E Premte - E Diel: 11:00 - 23:30</p>
+                    <p class="happy-hour">Happy Hour: Çdo ditë 17:00 - 19:00</p>
+                </div>
+                <div class="link-wrap text-center">
+                    <a href="reservations.html" class="underline-link">Rezervo një Tryezë</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="lacarte-section">
+    <div class="lacarte-container">
+        <!-- Titulli me dy vija anash -->
+        <div class="lacarte-title-wrap">
+            <span class="side-line"></span>
+            <h2 class="lacarte-title">LA CARTE</h2>
+            <span class="side-line"></span>
+        </div>
+
+        <!-- Teksti në qendër -->
+        <div class="lacarte-text-wrap">
+            <p class="lacarte-desc">
+                Stafi ynë i përkushtuar është modeli i mikpritjes. Ne jemi të angazhuar për të siguruar që përvoja juaj e ngrënies të jetë pa të meta, e personalizuar dhe vërtet e pashlyeshme në kujtesë. Nga sugjerimet e përshtatura sipas shijeve tuaja deri te detajet më të imëta, kënaqësia juaj është prioriteti ynë kryesor.
+            </p>
+            <p class="lacarte-desc">
+                Le të ritregojmë mënyrën se si e përjetoni ushqimin — ku çdo pjatë është një festë dhe çdo moment shijohet me ngadalësi. Mirësevini në botën e ekselencës kulinare.
+            </p>
+        </div>
+    </div>
+
+    <!-- Kontenieri i fotos me prerje dhe butonin mbi të -->
+    <div class="lacarte-banner-wrapper">
+        <div class="lacarte-btn-overlay">
+            <a href="menu.html" class="menu-underline-link">Shiko Menytë Tona</a>
+        </div>
+        
+        <div class="lacarte-clipped-img">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1600" alt="LUMEN La Carte Menus">
+        </div>
+    </div>
+</section>
+    
+
+<section class="chefs-section">
+    <!-- Header-i i Seksionit -->
+    <div class="chefs-header-container">
+        <div class="chefs-title-wrap">
+            <span class="side-line"></span>
+            <h2 class="chefs-title">THE CHEF’S WORDS</h2>
+            <span class="side-line"></span>
+        </div>
+
+        <p class="chefs-subtitle">
+            Our team of seasoned chefs, each a virtuoso in their domain, craft culinary wonders that push <span class="gold-text">the boundaries of creativity</span>.
+        </p>
+
+        <p class="chefs-desc">
+            We embrace sustainability, and it reflects in our practices. We strive to minimize our environmental footprint by supporting local farmers, reducing waste, and making responsible choices in sourcing our ingredients. We believe in giving back to the community that nurtures us, and we are actively involved in local initiatives and charities.
+        </p>
+    </div>
+
+    <!-- Seksjoni me Imazhin e Plotë dhe Kartën e Bardhë sipër -->
+    <div class="chefs-stage-wrapper">
+        <!-- Fotoja e madhe në sfond -->
+        <div class="bg-utensils-full">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1600" alt="Kitchen Utensils">
+        </div>
+
+        <!-- Karta e bardhë me dorëshkrimin që mbulon anën e majtë sipër -->
+        <div class="chef-white-card">
+            <p class="handwriting-text">
+                I have had the privilege of working in some of the finest kitchens. These experiences have shaped my skills and allowed me to push the boundaries of flavor and presentation.
+            </p>
+        </div>
+
+        <!-- Portreti i shefit që ulet poshtë në mes -->
+        <div class="chef-portrait-card">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=900" alt="Chef Making Pasta">
+        </div>
+    </div>
+</section>
+
+<!-- 1. GALERIA ME 3 FOTO -->
+<section class="gallery-trio-section">
+    <div class="gallery-trio-grid">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=800" alt="Special Dish">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800" alt="Restaurant Interior View">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=800" alt="Breakfast Table">
+        </div>
+    </div>
+</section>
+
+<!-- 2. SEKSION "THE RESTAURANT" ME BANNER ME KUTI TË ERRËT -->
+<section class="restaurant-banner-section">
+    <!-- Kutia e errët në qendër që mbivendoset -->
+    <div class="dark-overlay-card">
+        <div class="restaurant-title-wrap">
+            <span class="side-line-gold"></span>
+            <h2 class="restaurant-title">THE RESTAURANT</h2>
+            <span class="side-line-gold"></span>
+        </div>
+        <p class="dark-card-desc">
+            We embrace sustainability, and it reflects in our practices. We strive to minimize our environmental footprint by supporting local farmers, reducing waste, and making responsible choices in sourcing our ingredients. We believe in giving back to the community that nurtures us, and we are actively involved in local initiatives and charities.
+        </p>
+        <div class="dark-card-btn-wrap">
+            <a href="#" class="gold-underline-link">Discover the Restaurant</a>
+        </div>
+    </div>
+
+    <!-- Imazhi i madh i restorantit në sfond -->
+    <div class="restaurant-full-img">
+        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1600" alt="Modern Restaurant Interior">
+    </div>
+</section>
+
+<!-- 3. FOOTER-I I FAQES -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Logoja -->
+        <h2 class="footer-logo">RESTAURANT</h2>
+        <div class="footer-divider-top"></div>
+
+        <!-- Adresa dhe Orari -->
+        <div class="footer-info">
+            <p class="footer-address">Via Serlas 546, 6700 St. Moritz, Switzerland</p>
+            
+            <div class="footer-hours">
+                <p>Monday–Wednesday: <span>11a-9p</span></p>
+                <p>Thursday–Saturday: <span>11a-10p</span></p>
+                <p>Happy Hour: <span>Everyday 2p-6p</span></p>
+            </div>
+
+            <!-- Rrjetet Sociale -->
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-divider-bottom"></div>
+
+        <!-- Linket në fund -->
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Our Menus</a>
+            <a href="#">Reservation</a>
+            <a href="#">Get Directions</a>
+        </div>
+    </div>
+</footer>
+    <!-- Script për Overlay & Slider -->
+    <script>
+        const openMenuBtn = document.getElementById('openMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        openMenuBtn.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
